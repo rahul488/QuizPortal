@@ -1,0 +1,34 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <mat-card style="margin-top: 20px;">
+            <mat-card-content>
+             
+                <div *ngFor="let question of questions">
+                      
+                 <h3 class="example-h2">{{question.id}}.{{question.ques}}</h3>
+                 
+                 <section class="example-section">
+                   
+                   
+                    <p> <input type="radio"  class="example-margin">
+                       {{question.op1}}</p>
+                     
+                     <p><input type="radio">
+                      {{question.op2}}</p>
+                     
+                    <p><input type="radio">
+                       {{question.op3}}</p>
+                     
+                     <p><input type="radio">
+                       {{question.op4}}</p>
+                 </section>
+                 </div>
+                 
+               </mat-card-content>
+    
+               
+           </mat-card>
+             
+       </div>
+   
+   </div>

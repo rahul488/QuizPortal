@@ -1,0 +1,47 @@
+.text{
+    color: rgba(0, 0, 0, 0.671);
+    font-size: medium;
+    background-color: darkgray;
+    margin-top: 20px;
+}
+.cnt{
+    padding: 5px;
+    text-decoration: none;
+}
+.example-container {
+
+    width: 250px;
+    height: 800px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+    width: 200px;
+  }
+  .menu{
+      display: block;
+      padding: 20px;
+      color: lightcoral;
+  }
+  .content{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-top: -50%;
+    margin-left: 20%;
+
+  }
+  .example-card {
+    max-width: 220px;
+    margin-left: 10px;
+  }
+  

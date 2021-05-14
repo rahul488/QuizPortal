@@ -1,0 +1,42 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <div class="container text-center">
+                    <img src="../../../assets/logo/student.png">
+                </div>
+
+                <h1 class="text-center">Login here</h1>
+                <form (ngSubmit)="doLogin()">
+                    <!-- Username -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>userName</mat-label>
+                        <input [(ngModel)]="credentials.userName"
+                            name="userName" required 
+                        matInput placeholder="Enter Username">
+                    </mat-form-field>
+                    <!-- password -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input type="password"
+                        name="password" [(ngModel)]="credentials.password" required 
+                         matInput placeholder="Enter Password">
+                         <mat-hint><a style="margin-top: 2px; font-size: 15px; color: rgba(37, 0, 247, 0.774);" routerLink="/forgotPassword">Forgotpassword</a></mat-hint>
+                        <!--<mat-hint><a style="margin-top: 5px; color: blue;" routerLink="/signup">register</a></mat-hint> -->
+                    </mat-form-field>
+                   
+                   
+                    <div class="container text-center">
+                        <button  type="submit" class="col-md-3 text-center"  mat-raised-button color="primary">Login</button>
+                        <br>
+                        <button  routerLink="/signup" class="col-md-3 text-center" style="margin-top: 5px;" mat-raised-button color="accent">signup</button>
+                    </div>
+                    
+                </form>
+               </mat-card>  
+               
+            </div>
+        </div>
+    </div>
+</div>

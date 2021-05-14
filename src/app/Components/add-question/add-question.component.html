@@ -1,0 +1,49 @@
+<div class="bootstrap-wrapper">
+    <div class="conatiner ">
+        <mat-drawer-container class="example-container" autosize>
+            <mat-drawer #drawer class="example-sidenav" mode="side">
+               <a routerLink="/home" class="menu">Home</a>
+               <a routerLink="/addTopic" class="menu">Add Topics</a>
+               <a routerLink="/changepassword" class="menu">Settings</a>
+               <a class="menu">Message Box</a>
+             
+            </mat-drawer>
+            <div class="example-sidenav-content">
+                <button type="button" mat-button (click)="drawer.toggle()">
+                    Click
+                </button>
+            </div>
+        </mat-drawer-container>
+       
+       
+
+ <div class="container content">
+    <div class="row">
+       
+        <div *ngFor="let sub of topic">
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/logo/Book.jpg" height="100px">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>{{sub.name}}</mat-card-title>
+                    
+                  </mat-card-header>
+                <mat-card-content style="height: 20px;width: 330px;">
+                  <p>
+                   {{sub.specification}}
+                  </p>
+                </mat-card-content>
+                <mat-card-actions class="text-center" style="display: flex;">
+                <button routerLink="/{{sub.name}}"  mat-button color="warn">Add Question</button>
+                <button routerLink="/showquestion/{{sub.name}}"  mat-button color="accent">See Question</button>
+                </mat-card-actions>
+            </mat-card>
+        </div> 
+    </div>
+</div>
+
+
+
+    </div>
+
+</div>

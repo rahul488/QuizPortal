@@ -1,0 +1,49 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3">
+                <mat-card class="text-center">
+                    You Score is {{totalMark}}
+                </mat-card>
+                <mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+
+                    <!--- Note that these columns can be defined in any order.
+                          The actual rendered columns are set as a property on the row definition" -->
+                  
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="Id">
+                      <mat-header-cell *matHeaderCellDef> QID </mat-header-cell>
+                      <mat-cell *matCellDef="let ans">{{ans.questionId}} </mat-cell>
+                    </ng-container>
+                  
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="CorrectAns">
+                      <mat-header-cell *matHeaderCellDef> CorrectAns </mat-header-cell>
+                      <mat-cell *matCellDef="let ans"> {{ans.correctAns}} </mat-cell>
+                    </ng-container>
+                  
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="UserAns">
+                      <mat-header-cell *matHeaderCellDef> YourAns </mat-header-cell>
+                      <mat-cell *matCellDef="let ans"> {{ans.userAns}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Status">
+                        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+                        <mat-cell *matCellDef="let ans">{{ans.status}} </mat-cell>
+                      </ng-container>
+                  
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+                
+                <div class="conatiner">
+                    <h1>Thank You!</h1>
+                    <h2>See you soon..</h2>
+                </div>
+                  
+            </div>
+        </div>
+    </div>
+</div>

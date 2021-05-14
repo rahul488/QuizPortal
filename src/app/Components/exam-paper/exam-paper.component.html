@@ -1,0 +1,58 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <mat-card style="margin-top: 20px;">
+            <mat-card-content>
+                <div class="col-md-9 offset-3">
+                   
+                    <mat-progress-spinner class="spinner-margin"
+                    [color]="color"
+                    [mode]="mode"
+                    [value]="count">
+                    
+                    </mat-progress-spinner>
+                    <span *ngIf="track">
+                   <span *ngIf="checkCount()">
+
+                   </span>
+                  </span>
+                   <div class="timer-margin" >
+                       <h3  style="color: #ff0000;">{{count}} Min</h3>
+                   </div>
+                  
+                </div>
+            </mat-card-content>
+            
+            <mat-card-content>
+             
+             <div *ngFor="let question of questions">
+                   
+              <h3 class="example-h2">{{question.id}}.{{question.ques}}</h3>
+              
+              <section class="example-section">
+                
+                
+                 <p> <input type="radio"  (change)="getResult($event)" class="example-margin" name="{{question.id}}answer" value="{{question.id}}op1">
+                    {{question.op1}}</p>
+                  
+                  <p><input type="radio" (change)="getResult($event)" class="example-margin" name="{{question.id}}answer" value="{{question.id}}op2">
+                   {{question.op2}}</p>
+                  
+                 <p><input type="radio" (change)="getResult($event)" class="example-margin" name="{{question.id}}answer" value="{{question.id}}op3">
+                    {{question.op3}}</p>
+                  
+                  <p><input type="radio" (change)="getResult($event)" class="example-margin" name="{{question.id}}answer" value="{{question.id}}op4">
+                    {{question.op4}}</p>
+              </section>
+              </div>
+              
+            </mat-card-content>
+           <div class="container col-md-6 offset-6">
+            <button (click)="endXam()" class="text-center"  mat-raised-button color="primary">Submit</button>
+           </div>
+     
+            
+        </mat-card>
+          
+    </div>
+
+</div>

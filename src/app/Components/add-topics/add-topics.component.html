@@ -1,0 +1,30 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container" >
+        
+        <div class="col-md-6 offset-md-3" style="margin-top: 20px;height:fit-content">
+            <div class="container text-center">
+                <img src="../../../assets/logo/student.png">
+        
+        <form (ngSubmit)="addTopic()">
+            <!-- Topics -->
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Add Topics</mat-label>
+                <input [(ngModel)]="topic.name"
+                    name="topic" required 
+                matInput placeholder="Enter Topic">
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Add About</mat-label>
+                <input [(ngModel)]="topic.specification"
+                    name="topic" required 
+                matInput placeholder="Enter about">
+            </mat-form-field>
+            <div class="container text-center">
+                <button  type="submit" class="col-md-3 text-center"  mat-raised-button color="primary">Save</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+</div>

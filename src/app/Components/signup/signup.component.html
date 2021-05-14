@@ -1,0 +1,55 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 5px;">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <div class="container text-center">
+                    <img src="../../../assets/logo/student.png" height="100px">
+                </div>
+
+                <h2 class="text-center">Register here</h2>
+
+                <form (ngSubmit)="doregister()">
+                    <!-- First Name-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>FirstName</mat-label>
+                        <input [(ngModel)]="user.firstName"
+                                name="firstname" required minlength="3"
+                        matInput placeholder="Enter First Name">
+                    </mat-form-field>
+                    <!-- Last Name-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>LastName</mat-label>
+                        <input [(ngModel)]="user.lastName"
+                        name="lastName"  required minlength="3"
+                         matInput placeholder="Enter Last Name">
+                    </mat-form-field>
+                     <!-- Username -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input [(ngModel)]="user.userName"
+                            name="userName"  required minlength="4" maxlength="6"
+                            matInput placeholder="Enter userName">
+                    </mat-form-field>
+                    <!-- Password -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input type="password"
+                                 [(ngModel)]="user.password"
+                                name="password" required minlength="5"
+                                matInput placeholder="Enter Password">
+                    </mat-form-field>
+
+                    <div class="container text-center">
+                        <button  type="submit" class="col-md-3 text-center"  mat-raised-button color="primary">Register</button>
+                        <br>
+                        <button  routerLink="/login" class="col-md-3 text-center" style="margin-top: 5px;" mat-raised-button color="warn">Login</button>
+                    </div>
+                </form>
+            </mat-card>
+            </div>
+        </div>
+
+    </div>
+</div>
